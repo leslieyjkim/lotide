@@ -54,3 +54,5 @@ function countLetters(sentence) {
 const result = countLetters("lighthouse Labs");
 assertEqual(result.lowercase["l"], 2, "Count of 'l' (lowercase) is 2");
 assertEqual(result.uppercase["L"], 1, "Count of 'L' (uppercase) is 1");
+
+console.log(countLetters("lighthouse Labs"));
