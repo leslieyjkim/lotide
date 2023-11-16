@@ -19,14 +19,30 @@ const assertArraysEqual = function (actual, expected) {
   console.log(message);
 };
 
-const without = function (source, itemsToRemove) {
-  //takes 2 arrays
-  return source.filter((element) => !itemsToRemove.includes(element));
-}; //return a new array containing only the elements from 'source' array
+// const without = function (source, itemsToRemove) {
+//   return source.filter((element) => !itemsToRemove.includes(element));
+// };
+//explanation regarding above code:
+//takes 2 arrays
+//return a new array containing only the elements from 'source' array
 //that are not present in 'itemsToRemove'(to be removed from the 'source')
 //filter method : create new array with that pass the test by function
 //arrow function : check each element is not present in 'itemsToRemove'
 //passed element includes in the new array(will be result)
+
+//requirement says, no use filter method.
+//revised by usign for loop below;
+
+const without = function (source, itemsToRemove) {
+  const result = [];
+
+  for (let i = 0; i < source.length; i++) {
+    if (!itemsToRemove.includes(source[i])) {
+      result.push(source[i]);
+    }
+  }
+  return result;
+};
 
 // Test case 1
 const result1 = without([1, 2, 3], [1]);
