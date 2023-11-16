@@ -56,3 +56,11 @@ assertEqual(result.lowercase["l"], 2, "Count of 'l' (lowercase) is 2");
 assertEqual(result.uppercase["L"], 1, "Count of 'L' (uppercase) is 1");
 
 console.log(countLetters("lighthouse Labs"));
+
+//output would be this
+// ❌ Assertion Failed 1 !== 2
+// ✅ Assertion Passed: 1 === 1
+// {
+//   lowercase: { l: 1, i: 1, g: 1, h: 2, t: 1, o: 1, u: 1, s: 2, e: 1, a: 1, b: 1 },
+//   uppercase: { L: 1 }
+// }
