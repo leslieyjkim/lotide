@@ -6,28 +6,41 @@ const assertEqual = function (actual, expected) {
   }
 };
 
-const countLetters = function (sentence) {
-  const letterCount = {};
+// eslint-disable-next-line func-style
+function countLetters(sentence) {
+  const lowercaseCount = {};
+  const uppercaseCount = {};
+
   for (const letter of sentence) {
-    if (letter.match(/[a-zA-Z]/)) {
-      const upperCaseLetter = letter.toUpperCase();
-      letterCount[upperCaseLetter] = (letterCount[upperCaseLetter] || 0) + 1;
+    if (/^[a-zA-Z]$/.test(letter)) {
+      ////^[a-zA-Z]$ is used to test whether a given character letter is an uppercase or lowercase letter.
+      const isUpperCase = letter === letter.toUpperCase(); //Check if the letter is uppercase or lowercase
+      const countObject = isUpperCase ? uppercaseCount : lowercaseCount; //Update the count for the letter based on case
+      const key = isUpperCase ? letter : letter.toLowerCase(); //key will be assigned the value of letter if isUppercase is true, and the lowercase version of letter otherwise.
+
+      if (key in countObject) {
+        //alternative way to increment the count
+        countObject[key]++; //if it is, it increments existing value by 1.
+      } else {
+        countObject[key] = 1; // if it is not, it initializes with the value of 1.
+      }
+
+      //same result achived of previous line with below;
+      // countObject[key] = (countObject[key] || 0) + 1;
     }
   }
-  return letterCount;
-};
+  return { lowercase: lowercaseCount, uppercase: uppercaseCount };
+}
 
-const result = countLetters("lighthouse Labs");
-assertEqual(result, {
-  L: 3,
-  I: 1,
-  G: 1,
-  H: 2,
-  T: 1,
-  O: 1,
-  U: 1,
-  S: 1,
-  E: 1,
-  A: 1,
-  B: 1,
-});
+const sentence = "lighthouse Labs";
+const result = countLetters(sentence);
+
+console.log("Lowercase counts:");
+for (const letter in result.lowercase) {
+  console.log(`${letter}: ${result.lowercase[letter]} times`);
+}
+
+console.log("\nUppercase counts:");
+for (const letter in result.uppercase) {
+  console.log(`${letter}: ${result.uppercase[letter]} times`);
+}
