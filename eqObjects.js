@@ -88,3 +88,12 @@ assertEqual(
   eqObjects(multiColorShirtObject, longSleeveMultiColorShirtObject),
   false
 );
+
+
+
+
+
+✅ Assertion Passed: true === true
+✅ Assertion Passed: false === false
+✅ Assertion Passed: true === true
+✅ Assertion Passed: false === false
