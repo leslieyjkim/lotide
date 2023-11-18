@@ -25,7 +25,7 @@ const assertArraysEqual = function (actual, expected) {
   const message = eqArrays(actual, expected)
     ? "✅ Assertion Passed: Arrays are equal."
     : "❌ Assertion Failed: Arrays are not equal.";
-  return message;
+  console.log(message);
 };
 
 //Example usage
