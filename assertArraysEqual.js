@@ -29,6 +29,7 @@ const assertArraysEqual = function (actual, expected) {
   //eqArrays(actual, expected) is a function call to eqArrays with parameters actual and expected.
   //The ? is the ternary operator itself.
   //If the condition (eqArrays(actual, expected)) is true, the expression before the : is executed.
+  console.log(message);
   return message;
 };
 
