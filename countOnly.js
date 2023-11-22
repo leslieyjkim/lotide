@@ -60,3 +60,5 @@ assertEqual(result1["Agouhanna"], undefined);
 // #3-3. The purpose of this code is to iterate through each item in the allItems array, check if it should be counted based on the itemsToCount object, and then update the result object to keep track of the count for each item.
 
 // Finally, the entire result object is returned from the countOnly function, providing a count of each item based on the criteria specified in the itemsToCount object.
+
+module.exports = countOnly;

@@ -74,3 +74,5 @@ const obj10 = {
   sleeveLength: "short",
 };
 assertObjectsEqual(obj9, obj10);
+
+module.exports = assertObjectsEqual;

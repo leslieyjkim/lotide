@@ -31,3 +31,5 @@ assertEqual(findKeyByValue(bestTVShowsByGenre, "That '70s Show"), undefined);
 //output
 ✅ Assertion Passed: drama === drama
 ✅ Assertion Passed: undefined === undefined
+
+module.exports = findKeyByValue;

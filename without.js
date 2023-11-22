@@ -57,3 +57,5 @@ const originalArray = [1, 2, 3, 4, 5];
 const itemsToRemove = [2, 4];
 const result3 = without(originalArray, itemsToRemove);
 assertArraysEqual(originalArray, [1, 2, 3, 4, 5]); // should pass
+
+module.exports = without;

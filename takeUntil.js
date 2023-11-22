@@ -76,3 +76,4 @@ assertArraysEqual(
   takeUntil(data4, (x) => x === ","),
   expected2
 );
+module.exports = takeUntil;

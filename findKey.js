@@ -70,3 +70,5 @@ assertEqual(
   undefined,
   "Should return undefined when no matching key is found"
 );
+
+module.exports = findKey;
